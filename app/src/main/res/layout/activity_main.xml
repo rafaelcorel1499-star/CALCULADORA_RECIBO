@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/bg" android:orientation="vertical">
+
+    <FrameLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+
+        <!-- ===================== PANTALLA PRINCIPAL ===================== -->
+        <ScrollView android:id="@+id/screenHome" android:layout_width="match_parent" android:layout_height="match_parent"
+            android:fillViewport="true" android:scrollbars="none">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+
+                <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:background="@drawable/bg_header" android:minHeight="210dp" android:padding="24dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:layout_marginEnd="96dp" android:orientation="vertical" android:paddingBottom="16dp">
+                        <ImageView android:layout_width="30dp" android:layout_height="30dp"
+                            android:contentDescription="Inicio" android:src="@drawable/ic_home" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:layout_marginTop="14dp" android:text="Calcula tus" android:textColor="@color/white" android:textSize="22sp" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="gastos compartidos" android:textColor="@color/white" android:textSize="26sp" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp" android:text="Ingresa el valor de tus facturas y descubre cuánto le corresponde a cada persona."
+                            android:textColor="#E6F0FF" android:textSize="14sp" />
+                    </LinearLayout>
+                    <ImageView android:layout_width="96dp" android:layout_height="96dp" android:layout_gravity="end|top"
+                        android:contentDescription="Casa" android:src="@drawable/ic_house_dollar" />
+                </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginStart="16dp" android:layout_marginEnd="16dp" android:layout_marginTop="16dp"
+                android:background="@drawable/bg_card" android:orientation="vertical" android:padding="16dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_vertical" android:orientation="horizontal">
+                    <ImageView android:layout_width="120dp" android:layout_height="60dp"
+                        android:contentDescription="Valor factura luz mes" android:scaleType="fitCenter" android:src="@drawable/logo_aire" />
+                    <View android:layout_width="1dp" android:layout_height="48dp"
+                        android:layout_marginStart="10dp" android:layout_marginEnd="12dp" android:background="@drawable/bg_divider" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Valor factura luz mes" android:textColor="@color/text_dark" android:textSize="16sp" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp" android:text="Ingresa el valor de tu factura de energía." android:textColor="@color/text_gray" android:textSize="13sp" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="56dp"
+                    android:layout_marginTop="14dp" android:background="@drawable/bg_input"
+                    android:gravity="center_vertical" android:orientation="horizontal" android:paddingStart="16dp" android:paddingEnd="16dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="$" android:textColor="#5B7BA6" android:textSize="24sp" android:textStyle="bold" />
+                    <EditText android:id="@+id/etLuz" android:layout_width="0dp" android:layout_height="match_parent"
+                        android:layout_weight="1" android:background="@null" android:hint="Ej. 150000"
+                        android:importantForAutofill="no" android:inputType="number" android:maxLength="15"
+                        android:paddingStart="14dp" android:textColor="@color/text_dark" android:textColorHint="#A9B8CC" android:textSize="18sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginStart="16dp" android:layout_marginEnd="16dp" android:layout_marginTop="16dp"
+                android:background="@drawable/bg_card" android:orientation="vertical" android:padding="16dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_vertical" android:orientation="horizontal">
+                    <ImageView android:layout_width="120dp" android:layout_height="60dp"
+                        android:contentDescription="Valor factura agua mes" android:scaleType="fitCenter" android:src="@drawable/logo_aaa" />
+                    <View android:layout_width="1dp" android:layout_height="48dp"
+                        android:layout_marginStart="10dp" android:layout_marginEnd="12dp" android:background="@drawable/bg_divider" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Valor factura agua mes" android:textColor="@color/text_dark" android:textSize="16sp" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp" android:text="Ingresa el valor de tu factura de agua." android:textColor="@color/text_gray" android:textSize="13sp" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="56dp"
+                    android:layout_marginTop="14dp" android:background="@drawable/bg_input"
+                    android:gravity="center_vertical" android:orientation="horizontal" android:paddingStart="16dp" android:paddingEnd="16dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="$" android:textColor="#5B7BA6" android:textSize="24sp" android:textStyle="bold" />
+                    <EditText android:id="@+id/etAgua" android:layout_width="0dp" android:layout_height="match_parent"
+                        android:layout_weight="1" android:background="@null" android:hint="Ej. 100000"
+                        android:importantForAutofill="no" android:inputType="number" android:maxLength="15"
+                        android:paddingStart="14dp" android:textColor="@color/text_dark" android:textColorHint="#A9B8CC" android:textSize="18sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+                <LinearLayout android:id="@+id/btnCalcular"
+                    android:layout_width="match_parent" android:layout_height="62dp"
+                    android:layout_marginStart="16dp" android:layout_marginEnd="16dp" android:layout_marginTop="22dp"
+                    android:background="@drawable/bg_button" android:clickable="true" android:focusable="true"
+                    android:gravity="center_vertical" android:orientation="horizontal" android:paddingStart="20dp" android:paddingEnd="20dp">
+                    <ImageView android:layout_width="28dp" android:layout_height="28dp"
+                        android:contentDescription="Calcular" android:src="@drawable/ic_calc" />
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:paddingStart="16dp" android:text="Calcular precios a pagar por persona"
+                        android:textColor="@color/white" android:textSize="16sp" android:textStyle="bold" />
+                    <ImageView android:layout_width="22dp" android:layout_height="22dp"
+                        android:contentDescription="Ir" android:src="@drawable/ic_arrow" />
+                </LinearLayout>
+
+                <!-- Resultados -->
+                <LinearLayout android:id="@+id/resultsContainer"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp" android:layout_marginEnd="16dp" android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_card" android:orientation="vertical" android:padding="16dp" android:visibility="gone">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Resumen del mes" android:textColor="@color/text_dark" android:textSize="18sp" android:textStyle="bold" />
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp" android:orientation="horizontal">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                            android:text="Total facturas (luz + agua)" android:textColor="@color/text_gray" android:textSize="14sp" />
+                        <TextView android:id="@+id/tvTotal" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="$ 0" android:textColor="@color/text_dark" android:textSize="16sp" android:textStyle="bold" />
+                    </LinearLayout>
+                    <View android:layout_width="match_parent" android:layout_height="1dp"
+                        android:layout_marginTop="10dp" android:background="@drawable/bg_divider" />
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_vertical" android:orientation="horizontal" android:paddingTop="10dp" android:paddingBottom="10dp">
+                    <ImageView android:id="@+id/avHomeLinda" android:layout_width="56dp" android:layout_height="56dp"
+                        android:background="@drawable/bg_circle_avatar" android:clipToOutline="true"
+                        android:contentDescription="Linda" android:scaleType="centerCrop" android:src="@drawable/ic_avatar" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Linda" android:textColor="@color/text_dark" android:textSize="18sp" android:textStyle="bold" />
+                        <TextView android:id="@+id/tvPctLinda" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="30%" android:textColor="@color/text_gray" android:textSize="13sp" />
+                    </LinearLayout>
+                    <TextView android:id="@+id/tvAmountLinda" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="$ 0" android:textColor="@color/blue" android:textSize="20sp" android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_vertical" android:orientation="horizontal" android:paddingTop="10dp" android:paddingBottom="10dp">
+                    <ImageView android:id="@+id/avHomeRafael" android:layout_width="56dp" android:layout_height="56dp"
+                        android:background="@drawable/bg_circle_avatar" android:clipToOutline="true"
+                        android:contentDescription="Rafael" android:scaleType="centerCrop" android:src="@drawable/ic_avatar" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Rafael" android:textColor="@color/text_dark" android:textSize="18sp" android:textStyle="bold" />
+                        <TextView android:id="@+id/tvPctRafael" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="30%" android:textColor="@color/text_gray" android:textSize="13sp" />
+                    </LinearLayout>
+                    <TextView android:id="@+id/tvAmountRafael" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="$ 0" android:textColor="@color/blue" android:textSize="20sp" android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_vertical" android:orientation="horizontal" android:paddingTop="10dp" android:paddingBottom="10dp">
+                    <ImageView android:id="@+id/avHomeRicardo" android:layout_width="56dp" android:layout_height="56dp"
+                        android:background="@drawable/bg_circle_avatar" android:clipToOutline="true"
+                        android:contentDescription="Ricardo" android:scaleType="centerCrop" android:src="@drawable/ic_avatar" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Ricardo" android:textColor="@color/text_dark" android:textSize="18sp" android:textStyle="bold" />
+                        <TextView android:id="@+id/tvPctRicardo" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Valor restante (40%)" android:textColor="@color/text_gray" android:textSize="13sp" />
+                    </LinearLayout>
+                    <TextView android:id="@+id/tvAmountRicardo" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="$ 0" android:textColor="@color/blue" android:textSize="20sp" android:textStyle="bold" />
+                </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:orientation="vertical" android:paddingTop="24dp" android:paddingBottom="24dp">
+                    <ImageView android:layout_width="72dp" android:layout_height="72dp"
+                        android:contentDescription="Personas" android:src="@drawable/ic_people" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp" android:text="Comparte, organiza y paga justo."
+                        android:textColor="@color/text_dark" android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- ===================== CONFIGURACIÓN ===================== -->
+        <ScrollView android:id="@+id/screenSettings" android:layout_width="match_parent" android:layout_height="match_parent"
+            android:fillViewport="true" android:scrollbars="none" android:visibility="gone">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:background="@drawable/bg_header" android:orientation="vertical" android:padding="24dp" android:paddingBottom="40dp">
+                    <ImageView android:layout_width="30dp" android:layout_height="30dp"
+                        android:contentDescription="Configuración" android:src="@drawable/ic_settings" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp" android:text="Configuración" android:textColor="@color/white" android:textSize="26sp" android:textStyle="bold" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp" android:text="Agrega la foto de perfil de cada persona."
+                        android:textColor="#E6F0FF" android:textSize="14sp" />
+                </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginStart="16dp" android:layout_marginEnd="16dp" android:layout_marginTop="16dp"
+                android:background="@drawable/bg_card" android:gravity="center_vertical" android:orientation="horizontal" android:padding="16dp">
+                <ImageView android:id="@+id/avSetLinda" android:layout_width="76dp" android:layout_height="76dp"
+                    android:background="@drawable/bg_circle_avatar" android:clipToOutline="true"
+                    android:contentDescription="Linda" android:scaleType="centerCrop" android:src="@drawable/ic_avatar" />
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp" android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Linda" android:textColor="@color/text_dark" android:textSize="20sp" android:textStyle="bold" />
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp" android:orientation="horizontal">
+                        <TextView android:id="@+id/btnPickLinda" android:layout_width="wrap_content" android:layout_height="40dp"
+                            android:background="@drawable/bg_button_small" android:clickable="true" android:focusable="true"
+                            android:gravity="center" android:paddingStart="16dp" android:paddingEnd="16dp"
+                            android:text="Cambiar foto" android:textColor="@color/white" android:textSize="14sp" android:textStyle="bold" />
+                        <TextView android:id="@+id/btnRemoveLinda" android:layout_width="wrap_content" android:layout_height="40dp"
+                            android:layout_marginStart="8dp" android:background="@drawable/bg_button_outline" android:clickable="true" android:focusable="true"
+                            android:gravity="center" android:paddingStart="14dp" android:paddingEnd="14dp"
+                            android:text="Quitar" android:textColor="@color/text_gray" android:textSize="14sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginStart="16dp" android:layout_marginEnd="16dp" android:layout_marginTop="16dp"
+                android:background="@drawable/bg_card" android:gravity="center_vertical" android:orientation="horizontal" android:padding="16dp">
+                <ImageView android:id="@+id/avSetRafael" android:layout_width="76dp" android:layout_height="76dp"
+                    android:background="@drawable/bg_circle_avatar" android:clipToOutline="true"
+                    android:contentDescription="Rafael" android:scaleType="centerCrop" android:src="@drawable/ic_avatar" />
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp" android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Rafael" android:textColor="@color/text_dark" android:textSize="20sp" android:textStyle="bold" />
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp" android:orientation="horizontal">
+                        <TextView android:id="@+id/btnPickRafael" android:layout_width="wrap_content" android:layout_height="40dp"
+                            android:background="@drawable/bg_button_small" android:clickable="true" android:focusable="true"
+                            android:gravity="center" android:paddingStart="16dp" android:paddingEnd="16dp"
+                            android:text="Cambiar foto" android:textColor="@color/white" android:textSize="14sp" android:textStyle="bold" />
+                        <TextView android:id="@+id/btnRemoveRafael" android:layout_width="wrap_content" android:layout_height="40dp"
+                            android:layout_marginStart="8dp" android:background="@drawable/bg_button_outline" android:clickable="true" android:focusable="true"
+                            android:gravity="center" android:paddingStart="14dp" android:paddingEnd="14dp"
+                            android:text="Quitar" android:textColor="@color/text_gray" android:textSize="14sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginStart="16dp" android:layout_marginEnd="16dp" android:layout_marginTop="16dp"
+                android:background="@drawable/bg_card" android:gravity="center_vertical" android:orientation="horizontal" android:padding="16dp">
+                <ImageView android:id="@+id/avSetRicardo" android:layout_width="76dp" android:layout_height="76dp"
+                    android:background="@drawable/bg_circle_avatar" android:clipToOutline="true"
+                    android:contentDescription="Ricardo" android:scaleType="centerCrop" android:src="@drawable/ic_avatar" />
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp" android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Ricardo" android:textColor="@color/text_dark" android:textSize="20sp" android:textStyle="bold" />
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp" android:orientation="horizontal">
+                        <TextView android:id="@+id/btnPickRicardo" android:layout_width="wrap_content" android:layout_height="40dp"
+                            android:background="@drawable/bg_button_small" android:clickable="true" android:focusable="true"
+                            android:gravity="center" android:paddingStart="16dp" android:paddingEnd="16dp"
+                            android:text="Cambiar foto" android:textColor="@color/white" android:textSize="14sp" android:textStyle="bold" />
+                        <TextView android:id="@+id/btnRemoveRicardo" android:layout_width="wrap_content" android:layout_height="40dp"
+                            android:layout_marginStart="8dp" android:background="@drawable/bg_button_outline" android:clickable="true" android:focusable="true"
+                            android:gravity="center" android:paddingStart="14dp" android:paddingEnd="14dp"
+                            android:text="Quitar" android:textColor="@color/text_gray" android:textSize="14sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+                <View android:layout_width="match_parent" android:layout_height="24dp" />
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+
+    <!-- ===================== BARRA DE PESTAÑAS ===================== -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="64dp"
+        android:background="@color/white" android:elevation="8dp" android:orientation="horizontal">
+        <LinearLayout android:id="@+id/tabHome" android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:clickable="true" android:focusable="true"
+            android:gravity="center" android:orientation="vertical">
+            <ImageView android:id="@+id/tabHomeIcon" android:layout_width="24dp" android:layout_height="24dp"
+                android:contentDescription="Inicio" android:src="@drawable/ic_home" />
+            <TextView android:id="@+id/tabHomeText" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Calcular" android:textSize="12sp" android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/tabSettings" android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:clickable="true" android:focusable="true"
+            android:gravity="center" android:orientation="vertical">
+            <ImageView android:id="@+id/tabSettingsIcon" android:layout_width="24dp" android:layout_height="24dp"
+                android:contentDescription="Configuración" android:src="@drawable/ic_settings" />
+            <TextView android:id="@+id/tabSettingsText" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Configuración" android:textSize="12sp" android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

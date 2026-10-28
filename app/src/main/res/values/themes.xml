@@ -1,0 +1,9 @@
+<resources>
+    <style name="Theme.CalculoFactura" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/blue_dark</item>
+        <item name="colorPrimaryDark">@color/blue_dark</item>
+        <item name="colorAccent">@color/teal</item>
+        <item name="android:statusBarColor">@color/blue_dark</item>
+        <item name="android:windowBackground">@color/bg</item>
+    </style>
+</resources>
